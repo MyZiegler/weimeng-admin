@@ -1,0 +1,72 @@
+{
+  "name": "member_card",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "id": true
+    },
+    "card_color": {
+      "type": "string"
+    },
+    "card_background_image": {
+      "type": "string"
+    },
+    "card_name": {
+      "type": "string",
+      "required": true
+    },
+    "benefit_discount": {
+      "type": "number"
+    },
+    "benefit_mail": {
+      "type": "string",
+      "default": "TRUE"
+    },
+    "coupon_id_list": {
+      "type": [
+        "number"
+      ]
+    },
+    "benefit_member_point": {
+      "type": "number"
+    },
+    "tips": {
+      "type": "string"
+    },
+    "server_phone": {
+      "type": "string"
+    },
+    "member_card_validity": {
+      "type": "number"
+    },
+    "member_card_start": {
+      "type": "date"
+    },
+    "member_card_end": {
+      "type": "date"
+    },
+    "overdue_adjust_to": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string",
+      "default": "USING"
+    },
+    "create_time": {
+      "type": "date",
+      "defaultFn": "now"
+    },
+    "update_time": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

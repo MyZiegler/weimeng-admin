@@ -1,0 +1,36 @@
+{
+  "name": "toGetPaid",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "id": true
+    },
+    "message_content": {
+      "type": "string"
+    },
+    "template_color": {
+      "type": "string",
+      "default": "#D0021B"
+    },
+    "state": {
+      "type": "string",
+      "default": "USING"
+    },
+    "create_time": {
+      "type": "date",
+      "defaultFn": "now"
+    },
+    "update_time": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

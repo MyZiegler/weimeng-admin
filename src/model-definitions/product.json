@@ -1,0 +1,94 @@
+{
+  "name": "product",
+  "plural": "products",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "product_id": {
+      "type": "number",
+      "id": true,
+      "description": "产品ID"
+    },
+    "product_name": {
+      "type": "string",
+      "required": true,
+      "description": "产品名称",
+      "default": "非常好的产品"
+    },
+    "product_current_price": {
+      "type": "number",
+      "required": true,
+      "description": "产品现价"
+    },
+    "product_origin_price": {
+      "type": "number",
+      "description": "产品原价"
+    },
+    "product_stock": {
+      "type": "number",
+      "required": true,
+      "description": "产品库存"
+    },
+    "property_id_list": {
+      "type": "string"
+    },
+    "product_share_description": {
+      "type": "string",
+      "description": "产品分享描述"
+    },
+    "product_description": {
+      "type": "string",
+      "description": "产品详情"
+    },
+    "create_time": {
+      "type": "date",
+      "description": "创建时间",
+      "defaultFn": "now"
+    },
+    "update_time": {
+      "type": "date",
+      "description": "更新时间"
+    },
+    "product_imgs": {
+      "type": "string",
+      "description": "图片列表"
+    },
+    "product_type": {
+      "type": "string",
+      "description": "商品类目"
+    },
+    "product_list": {
+      "type": "string",
+      "description": "商品分组"
+    },
+    "sell_ponit": {
+      "type": "string",
+      "description": "卖点"
+    },
+    "mail_price": {
+      "type": "string",
+      "description": "邮费"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "productProperty": {
+      "type": "hasMany",
+      "model": "property",
+      "foreignKey": "product_id",
+      "through": "product_and_property",
+      "keyThrough": "property_id"
+    },
+    "images": {
+      "type": "hasMany",
+      "model": "product_image",
+      "foreignKey": ""
+
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

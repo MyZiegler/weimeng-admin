@@ -1,0 +1,58 @@
+{
+  "name": "order",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "order_id": {
+      "type": "number",
+      "id": true
+    },
+    "order_no": {
+      "type": "string",
+      "required": true
+    },
+    "user_id": {
+      "type": "number",
+      "required": true
+    },
+    "address_id": {
+      "type": "number",
+      "required": true
+    },
+    "product_id_list": {
+      "type": [
+        "number"
+      ]
+    },
+    "state": {
+      "type": "string",
+      "default": "PAID"
+    },
+    "create_time": {
+      "type": "date",
+      "defaultFn": "now"
+    },
+    "order_time": {
+      "type": "date",
+      "defaultFn": "now"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "order_product": {
+      "type": "belongsTo",
+      "model": "product",
+      "foreignKey": "product_id"
+    },
+    "order_user": {
+      "type": "belongsTo",
+      "model": "shopuser",
+      "foreignKey": "user_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

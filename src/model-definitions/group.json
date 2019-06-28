@@ -1,0 +1,59 @@
+{
+  "name": "group",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "id": true
+    },
+    "activity_name": {
+      "type": "string",
+      "required": true
+    },
+    "start_time": {
+      "type": "date"
+    },
+    "end_time": {
+      "type": "date"
+    },
+    "group_type": {
+      "type": "string",
+      "default": "NORMAL"
+    },
+    "amount_limit": {
+      "type": "number",
+      "required": true
+    },
+    "product_id_list": {
+      "type": "array",
+      "default": "[]"
+    },
+    "member_amount": {
+      "type": "number",
+      "required": true
+    },
+    "group_validity": {
+      "type": "number",
+      "required": true
+    },
+    "state": {
+      "type": "string",
+      "default": "USING"
+    },
+    "create_time": {
+      "type": "date",
+      "defaultFn": "now"
+    },
+    "update_time": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

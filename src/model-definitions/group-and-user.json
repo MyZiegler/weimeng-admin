@@ -1,0 +1,40 @@
+{
+  "name": "group-and-user",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "id": true
+    },
+    "group_id": {
+      "type": "number",
+      "required": true
+    },
+    "user_id": {
+      "type": "number",
+      "required": true
+    },
+    "activity_name": {
+      "type": "string"
+    },
+    "role": {
+      "type": "string",
+      "default": "MEMBER"
+    },
+    "create_time": {
+      "type": "date",
+      "defaultFn": "now"
+    },
+    "update_time": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

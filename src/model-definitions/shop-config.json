@@ -1,0 +1,46 @@
+{
+  "name": "shop_config",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "id": true
+    },
+    "shop_name": {
+      "type": "string",
+      "required": true
+    },
+    "shop_number": {
+      "type": "number",
+      "required": true
+    },
+    "shop_category": {
+      "type": "string"
+    },
+    "shop_logo": {
+      "type": "string"
+    },
+    "shop_manager_phone": {
+      "type": "string",
+      "required": true
+    },
+    "shop_brief": {
+      "type": "string"
+    },
+    "create_time": {
+      "type": "date",
+      "defaultFn": "now"
+    },
+    "update_time": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

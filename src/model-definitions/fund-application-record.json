@@ -1,0 +1,46 @@
+{
+  "name": "fund_application_record",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "id": true
+    },
+    "bank_card": {
+      "type": "string",
+      "required": true
+    },
+    "bank_card_username": {
+      "type": "string",
+      "required": true,
+      "default": "n"
+    },
+    "open_account_bank": {
+      "type": "string"
+    },
+    "transfer_amount": {
+      "type": "number",
+      "required": true
+    },
+    "phone_number": {
+      "type": "string",
+      "required": true
+    },
+    "state": {
+      "type": "string",
+      "default": "DEALING"
+    },
+    "create_time": {
+      "type": "date",
+      "defaultFn": "now"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

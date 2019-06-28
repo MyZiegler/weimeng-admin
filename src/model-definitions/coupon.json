@@ -1,0 +1,52 @@
+{
+  "name": "coupon",
+  "plural": "coupons",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "id": true
+    },
+    "price": {
+      "type": "number"
+    },
+    "product_id": {
+      "type": "number"
+    },
+    "create_time": {
+      "type": "date"
+    },
+    "update_time": {
+      "type": "date"
+    },
+    "coupon_name": {
+      "type": "string"
+    },
+    "coupon_restriction": {
+      "type": "string"
+    },
+    "coupon_validity": {
+      "type": "string"
+    },
+    "coupon_count": {
+      "type": "number"
+    },
+    "coupon_used": {
+      "type": "number"
+    },
+    "coupon_rate": {
+      "type": "number"
+    },
+    "coupon_state": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

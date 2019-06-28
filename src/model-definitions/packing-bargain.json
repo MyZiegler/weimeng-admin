@@ -1,0 +1,55 @@
+{
+  "name": "packingBargain",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "id": true
+    },
+    "activity_name": {
+      "type": "string"
+    },
+    "start_time": {
+      "type": "date"
+    },
+    "end_time": {
+      "type": "date"
+    },
+    "price_limit": {
+      "type": "number"
+    },
+    "amount_limit": {
+      "type": "number"
+    },
+    "goods_limit": {
+      "type": "string"
+    },
+    "discount_overlay": {
+      "type": "string",
+      "default": "off"
+    },
+    "goods_id_list": {
+      "type": "array",
+      "default": "[]"
+    },
+    "state": {
+      "type": "string",
+      "default": "USING"
+    },
+    "create_time": {
+      "type": "date",
+      "defaultFn": "now"
+    },
+    "update_time": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

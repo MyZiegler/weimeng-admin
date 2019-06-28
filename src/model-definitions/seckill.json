@@ -1,0 +1,53 @@
+{
+  "name": "seckill",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "id": true
+    },
+    "product_id": {
+      "type": "number"
+    },
+    "activity_name": {
+      "type": "string"
+    },
+    "activity_tag": {
+      "type": "string"
+    },
+    "buy_limit": {
+      "type": "number"
+    },
+    "auto_cancel_minute": {
+      "type": "number"
+    },
+    "start_time": {
+      "type": "date"
+    },
+    "end_time": {
+      "type": "date"
+    },
+    "state": {
+      "type": "string",
+      "default": "USING"
+    },
+    "create_time": {
+      "type": "date",
+      "defaultFn": "now"
+    },
+    "update_time": {
+      "type": "date"
+    },
+    "validity": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

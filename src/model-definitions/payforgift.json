@@ -1,0 +1,57 @@
+{
+  "name": "payforgift",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "id": true
+    },
+    "activity_name": {
+      "type": "string",
+      "required": true
+    },
+    "start_time": {
+      "type": "date",
+      "required": true
+    },
+    "end_time": {
+      "type": "date",
+      "required": true
+    },
+    "discount_condition_money": {
+      "type": "number",
+      "required": true
+    },
+    "discountcoupon_id_list": {
+      "type": "array",
+      "default": "[]"
+    },
+    "discountcode_id_list": {
+      "type": "array",
+      "default": "[]"
+    },
+    "gift_id_list": {
+      "type": "array",
+      "default": "[]"
+    },
+    "state": {
+      "type": "string",
+      "default": "USING"
+    },
+    "create_time": {
+      "type": "date",
+      "defaultFn": "now"
+    },
+    "update_time": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

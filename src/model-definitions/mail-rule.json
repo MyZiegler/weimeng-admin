@@ -1,0 +1,42 @@
+{
+  "name": "mail_rule",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "required": true
+    },
+    "mail_id": {
+      "type": "number",
+      "required": true
+    },
+    "city_list": {
+      "type": [
+        "string"
+      ],
+      "required": true
+    },
+    "money_limit": {
+      "type": "number"
+    },
+    "amount_limit": {
+      "type": "number"
+    },
+    "create_time": {
+      "type": "date",
+      "defaultFn": "now"
+    },
+    "update_time": {
+      "type": "date",
+      "defaultFn": "now"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

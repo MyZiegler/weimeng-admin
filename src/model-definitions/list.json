@@ -1,0 +1,35 @@
+{
+  "name": "list",
+  "plural": "lists",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "id": true
+    },
+    "product_list_name": {
+      "type": "string"
+    },
+    "product_id_list": {
+      "type": "array"
+    },
+    "child_list":{
+      "type":"array"
+    },
+    "create_time": {
+      "type": "date"
+    },
+    "update_time": {
+      "type": "date"
+    }
+
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
